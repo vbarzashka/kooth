@@ -1,0 +1,42 @@
+Not registered/logged in user
+
+1. Home page online status:
+	a./ header
+	b./ "chat to us now" block
+	c./ footer
+2./ Login:
+	a./ header button
+	b./ "chat to us now" button
+	c./ "What’s happening on Kooth" - "Read more" links
+	d./ "chat to us now" button in the footer
+3./ Sign Up (not ready)
+	a./ "Join Kooth" button
+	b./ Link in the login form
+4./ Links on home page:
+	a./ "Report abuse" button in the header (not ready)
+	b./ "Watch video" button
+	c./ Articles in "What’s happening on Kooth" (not ready)
+	d./ "Terms of use" in footer
+	e./ "Accessibility" in footer
+	f./ "Privacy and Safety" in footer
+	g./ "Confidentiality" in footer
+
+Registered user
+
+1./ Logout
+2./ Messages
+	a./ Message the team - send message, open message history, check unread message style, send message with emojis & special characters, use back arrow, use pagination
+	b./ Short / long messages
+3./ Chat
+	a./ start a chat
+	b./ emojis and special characters
+	c./ minimize and maximize chat window, check notification for new messages in the chat, open different pages during chat
+	d./ links, pools, files received in chat (chat resources) (not ready)
+	e./ chat feedback (after the chat session is closed) 
+	f./ chat resources - open page, download from chat screen, download from chat resources page (not ready)
+
+4./ Links in footer (not ready)
+
+
+
+
