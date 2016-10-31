@@ -3,12 +3,12 @@ var assert = require('chai').assert,
 	should = require('chai').should(),
     test = require('selenium-webdriver/testing'),
     testSec = require('selenium-webdriver/testing'),
-    //until = require('selenium-webdriver'),
+    until = require('selenium-webdriver'),
     webdriver = require('selenium-webdriver'),
     chrome = require('selenium-webdriver/chrome'),
 	firefox = require('selenium-webdriver/firefox'),
-    //path = require('chromedriver').path,
-    //service = new chrome.ServiceBuilder(path).build(),
+    path = require('chromedriver').path,
+    service = new chrome.ServiceBuilder(path).build(),
     driver;
 	
 
