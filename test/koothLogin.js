@@ -25,9 +25,8 @@ test.describe('Login', function (done) {
         driver.get("http://584-kooth.dev2.despark.com");
         //wait till page is loaded
         driver.wait(function () {
-//          return driver.isElementPresent(webdriver.By.xpath("//a[@data-open='modal-login']"));
-            //return driver.isElementPresent(webdriver.By.xpath("//a[@class='js-hide-until-loaded']"));
-            return driver.isElementPresent(webdriver.By.xpath("//div[@class='header-buttons']"));
+            return driver.findElement(webdriver.By.xpath("//div[@class='header-buttons']"));
+            
         }, 50000);
         
         
@@ -46,10 +45,10 @@ test.describe('Login', function (done) {
 		
     test.it('Login in header', function (done) {
         //Find the Login button in the header and click on it
-        driver.findElement(webdriver.By.xpath("//a[@class='Button is-yellow is-small js-login-button']")).click();
+        driver.findElement(webdriver.By.xpath("//a[@class='Link']")).click();
 		
 	    driver.wait(function () {
-            return driver.isElementPresent(webdriver.By.xpath("//input[@id='login-username']"));
+            return driver.findElement(webdriver.By.xpath("//input[@id='login-username']"));
         }, 10000);
 		
 		//enter username 
@@ -65,20 +64,20 @@ test.describe('Login', function (done) {
         });
 		
         //click submit button
-		driver.findElement(webdriver.By.xpath("//input[@value='Submit']")).submit();
-		
+		driver.findElement(webdriver.By.xpath("//button[@value='Submit']")).submit();
+
 		//verify login
-		var myUser = driver.findElement(webdriver.By.xpath("//div[@class='username']"));
+		var myUser = driver.findElement(webdriver.By.xpath("//span[@class='username']"));
 		myUser.getAttribute('value').then(function (value) {
 		    assert.equal(value, 'barzashka');
         });
 		
 		//logout
-		driver.findElement(webdriver.By.xpath("//div[@class='username']")).click();
+		driver.findElement(webdriver.By.xpath("//span[@class='username']")).click();
 		driver.findElement(webdriver.By.xpath("//div[@class='Link is-half-opaque']")).click();
 		
 		driver.wait(function () {
-            return driver.isElementPresent(webdriver.By.xpath("//div[@class='Button is-yellow is-small js-login-button']"));
+            return driver.findElement(webdriver.By.xpath("//div[@class='Button is-yellow is-small js-login-button']"));
         }, 10000);
 		
 		driver.sleep(3000);
@@ -92,7 +91,7 @@ test.describe('Login', function (done) {
         driver.findElement(webdriver.By.xpath("//a[@class='Button is-yellow chat-link-chat']")).click();
 		
 	    driver.wait(function () {
-            return driver.isElementPresent(webdriver.By.xpath("//input[@id='login-username']"));
+            return driver.findElement(webdriver.By.xpath("//input[@id='login-username']"));
         }, 10000);
 		
 		//enter username 
@@ -108,7 +107,7 @@ test.describe('Login', function (done) {
         });
 		
         //click submit button
-		driver.findElement(webdriver.By.xpath("//input[@value='Submit']")).submit();
+	    driver.findElement(webdriver.By.xpath("//button[@value='Submit']")).submit();
 		
 		//verify login
 		var myUser = driver.findElement(webdriver.By.xpath("//div[@class='username']"));
@@ -121,7 +120,7 @@ test.describe('Login', function (done) {
 		driver.findElement(webdriver.By.xpath("//div[@class='Link is-half-opaque']")).click();
 		
 		driver.wait(function () {
-            return driver.isElementPresent(webdriver.By.xpath("//div[@class='Button is-yellow is-small js-login-button']"));
+            return driver.findElement(webdriver.By.xpath("//div[@class='Button is-yellow is-small js-login-button']"));
         }, 10000);
 	
 		driver.sleep(3000);
